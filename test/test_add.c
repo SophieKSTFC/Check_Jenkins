@@ -21,7 +21,7 @@ int main(void)
     suite_add_tcase(s1, tc1_1);
     tcase_add_test(tc1_1, test_add);
 
-    srunner_run_all(sr, CK_ENV);
+    srunner_run_all(sr, CK_SILENT);
     nf = srunner_ntests_failed(sr);
     srunner_free(sr);
 
