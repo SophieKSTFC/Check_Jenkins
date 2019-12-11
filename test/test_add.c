@@ -3,8 +3,10 @@
 
 START_TEST (test_add)
 {
-    ck_assert_int_eq(add(5,5), 10);
-    ck_assert_int_eq(add(7,5), 10);
+    int value1 = 5;
+    int value2 = 7;
+    ck_assert_int_eq(add(&value1, &value1), 10);
+    ck_assert_int_eq(add(&value1, &value2), 10);
 }
 END_TEST
 
@@ -15,6 +17,7 @@ int main(void)
     SRunner *sr = srunner_create(s1);
     int nf;
 
+    srunner_set_xml(sr, "test-output.xml");
     suite_add_tcase(s1, tc1_1);
     tcase_add_test(tc1_1, test_add);
 

@@ -5,9 +5,9 @@ add: src/main.c src/add.c
 	$(CC) -o add src/main.c src/add.c \
 	-I /Users/dbu19518/Develop/Check_Jenkins/include/ \
 
-test_even_digits: test/test_even_digits.cpp src/even_digit_calculator.cpp 
-	$(CC) --std=c++11 -o test_even_digits test/test_even_digits.cpp src/even_digit_calculator.cpp  \
+test_add: test/test_add.c src/add.c
+	$(CC) -o test_add test/test_add.c src/add.c \
 	-I /usr/local/include \
-	-I /Users/dbu19518/Develop/Travis_Test_C/include/ \
+	-I /Users/dbu19518/Develop/Check_Jenkins/include/ \
 	-L /usr/local/lib \
-	-lboost_unit_test_framework
+	-lcheck
