@@ -17,7 +17,7 @@ int main(void)
     SRunner *sr = srunner_create(s1);
     int nf;
 
-    srunner_set_xml(sr, "test-output.xml");
+    srunner_set_xml(sr, "test/test-output.xml");
     suite_add_tcase(s1, tc1_1);
     tcase_add_test(tc1_1, test_add);
 
