@@ -6,7 +6,7 @@ START_TEST (test_add)
     int value1 = 5;
     int value2 = 7;
     ck_assert_int_eq(add(&value1, &value1), 10);
-    ck_assert_int_eq(add(&value1, &value2), 10);
+    ck_assert_int_eq(add(&value1, &value2), 12);
 }
 END_TEST
 
